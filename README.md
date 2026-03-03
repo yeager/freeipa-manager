@@ -2,6 +2,8 @@
 
 A GTK4/Adwaita graphical interface and command-line tool for managing FreeIPA identity management servers.
 
+![FreeIPA Manager](screenshots/screenshot.png)
+
 ## Features
 
 - **Dashboard** — Server overview, certificate expiry warnings, replication topology, service health
