@@ -1,0 +1,704 @@
+# Swedish translation for freeipa-manager.
+# Copyright (C) 2024 Daniel Nylander
+# This file is distributed under the same license as the freeipa-manager package.
+# Daniel Nylander <daniel@danielnylander.se>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: freeipa-manager 0.1.0\n"
+"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
+"POT-Creation-Date: 2026-03-03 16:53+0100\n"
+"PO-Revision-Date: 2026-03-03 17:00+0100\n"
+"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: freeipa_manager/__main__.py:15
+msgid "FreeIPA Manager — CLI for FreeIPA administration"
+msgstr "FreeIPA-hanterare — CLI för FreeIPA-administration"
+
+#: freeipa_manager/__main__.py:22
+msgid "FreeIPA server hostname"
+msgstr "FreeIPA-serverns värdnamn"
+
+#: freeipa_manager/__main__.py:26
+msgid "Kerberos realm"
+msgstr "Kerberos-realm"
+
+#: freeipa_manager/__main__.py:30
+msgid "Username for password authentication"
+msgstr "Användarnamn för lösenordsautentisering"
+
+#: freeipa_manager/__main__.py:34
+msgid "Password (omit to prompt)"
+msgstr "Lösenord (utelämna för att bli tillfrågad)"
+
+#: freeipa_manager/__main__.py:40
+msgid "Output in JSON format"
+msgstr "Utdata i JSON-format"
+
+#: freeipa_manager/__main__.py:46
+msgid "Suppress non-essential output"
+msgstr "Undertryck icke-nödvändig utskrift"
+
+#: freeipa_manager/__main__.py:52
+msgid "Disable SSL certificate verification"
+msgstr "Inaktivera SSL-certifikatverifiering"
+
+#: freeipa_manager/__main__.py:55
+msgid "Available commands"
+msgstr "Tillgängliga kommandon"
+
+#: freeipa_manager/__main__.py:58
+msgid "Test connection to a FreeIPA server"
+msgstr "Testa anslutning till en FreeIPA-server"
+
+#: freeipa_manager/__main__.py:61
+msgid "User management"
+msgstr "Användarhantering"
+
+#: freeipa_manager/__main__.py:65 freeipa_manager/__main__.py:80
+#: freeipa_manager/__main__.py:100
+msgid "Action to perform"
+msgstr "Åtgärd att utföra"
+
+#: freeipa_manager/__main__.py:67
+msgid "User login for 'show'"
+msgstr "Användarinloggning för 'show'"
+
+#: freeipa_manager/__main__.py:70
+msgid "Group management"
+msgstr "Grupphantering"
+
+#: freeipa_manager/__main__.py:73
+msgid "Host management"
+msgstr "Värdhantering"
+
+#: freeipa_manager/__main__.py:76
+msgid "Certificate management"
+msgstr "Certifikathantering"
+
+#: freeipa_manager/__main__.py:84
+msgid "Days threshold for expiring certs (default: 30)"
+msgstr "Dagars tröskel för utgående certifikat (standard: 30)"
+
+#: freeipa_manager/__main__.py:88
+msgid "HBAC and sudo rules"
+msgstr "HBAC- och sudo-regler"
+
+#: freeipa_manager/__main__.py:92
+msgid "Policy type (default: hbac)"
+msgstr "Policytyp (standard: hbac)"
+
+#: freeipa_manager/__main__.py:96
+msgid "DNS management"
+msgstr "DNS-hantering"
+
+#: freeipa_manager/__main__.py:102
+msgid "DNS zone for record listing"
+msgstr "DNS-zon för postlistning"
+
+#: freeipa_manager/__main__.py:105
+msgid "Dashboard status summary"
+msgstr "Sammanfattning av instrumentpanelens status"
+
+#: freeipa_manager/app.py:102
+msgid "Welcome to FreeIPA Manager"
+msgstr "Välkommen till FreeIPA-hanterare"
+
+#: freeipa_manager/app.py:104
+msgid ""
+"Manage your FreeIPA server with an intuitive desktop interface.\n"
+"\n"
+"To get started, configure your FreeIPA server connection."
+msgstr ""
+"Hantera din FreeIPA-server med ett intuitivt skrivbordsgränssnitt.\n"
+"\n"
+"Konfigurera din FreeIPA-serveranslutning för att komma igång."
+
+#: freeipa_manager/app.py:108
+msgid "Get Started"
+msgstr "Kom igång"
+
+#: freeipa_manager/app.py:118 freeipa_manager/window.py:39
+msgid "FreeIPA Manager"
+msgstr "FreeIPA-hanterare"
+
+#: freeipa_manager/app.py:128
+msgid "GTK4/Adwaita GUI and CLI for managing FreeIPA servers"
+msgstr "GTK4/Adwaita GUI och CLI för att hantera FreeIPA-servrar"
+
+#: freeipa_manager/api.py:75
+msgid "Not connected — call login first"
+msgstr "Inte ansluten — logga in först"
+
+#: freeipa_manager/api.py:99
+msgid "Session expired — please reconnect"
+msgstr "Sessionen har gått ut — anslut igen"
+
+#: freeipa_manager/api.py:101
+#, python-format
+msgid "HTTP %d from %s"
+msgstr "HTTP %d från %s"
+
+#: freeipa_manager/auth.py:35
+msgid "Neither requests-gssapi nor requests-kerberos is installed"
+msgstr "Varken requests-gssapi eller requests-kerberos är installerat"
+
+#: freeipa_manager/auth.py:50
+#, python-format
+msgid "Kerberos authentication failed (HTTP %d)"
+msgstr "Kerberos-autentisering misslyckades (HTTP %d)"
+
+#: freeipa_manager/auth.py:81
+msgid "Invalid username or password"
+msgstr "Ogiltigt användarnamn eller lösenord"
+
+#: freeipa_manager/auth.py:84
+#, python-format
+msgid "Password authentication failed (HTTP %d)"
+msgstr "Lösenordsautentisering misslyckades (HTTP %d)"
+
+#: freeipa_manager/window.py:22 freeipa_manager/window.py:109
+msgid "Dashboard"
+msgstr "Instrumentpanel"
+
+#: freeipa_manager/window.py:23
+msgid "Users"
+msgstr "Användare"
+
+#: freeipa_manager/window.py:24
+msgid "Groups"
+msgstr "Grupper"
+
+#: freeipa_manager/window.py:25
+msgid "Hosts"
+msgstr "Värdar"
+
+#: freeipa_manager/window.py:26
+msgid "Policies"
+msgstr "Policyer"
+
+#: freeipa_manager/window.py:27
+msgid "DNS"
+msgstr "DNS"
+
+#: freeipa_manager/window.py:28
+msgid "Certificates"
+msgstr "Certifikat"
+
+#: freeipa_manager/window.py:79
+msgid "Navigation"
+msgstr "Navigering"
+
+#: freeipa_manager/window.py:87
+msgid "Not connected"
+msgstr "Inte ansluten"
+
+#: freeipa_manager/window.py:114
+msgid "Toggle Dark Theme"
+msgstr "Växla mörkt tema"
+
+#: freeipa_manager/window.py:120
+msgid "Refresh"
+msgstr "Uppdatera"
+
+#: freeipa_manager/window.py:128
+msgid "Content"
+msgstr "Innehåll"
+
+#: freeipa_manager/window.py:170
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: freeipa_manager/window.py:171
+msgid "About FreeIPA Manager"
+msgstr "Om FreeIPA-hanterare"
+
+#: freeipa_manager/window.py:261
+#, python-format
+msgid "Connection failed: %s"
+msgstr "Anslutningen misslyckades: %s"
+
+#: freeipa_manager/window.py:263
+msgid "Connection Failed"
+msgstr "Anslutningen misslyckades"
+
+msgid "OK"
+msgstr "OK"
+
+#: freeipa_manager/window.py:280 freeipa_manager/window.py:316
+#, python-format
+msgid "Connected to %s — Last refresh: %s"
+msgstr "Ansluten till %s — Senast uppdaterad: %s"
+
+#: freeipa_manager/views/dashboard.py:79
+#, python-format
+msgid "%d days"
+msgstr "%d dagar"
+
+#: freeipa_manager/views/dashboard.py:104
+msgid "Overview"
+msgstr "Översikt"
+
+msgid "Servers"
+msgstr "Servrar"
+
+#: freeipa_manager/views/dashboard.py:126
+msgid "Certificate Expiry Warnings"
+msgstr "Varningar om certifikatutgång"
+
+#: freeipa_manager/views/dashboard.py:136
+msgid "No certificate warnings"
+msgstr "Inga certifikatvarningar"
+
+#: freeipa_manager/views/dashboard.py:137
+msgid "Connect to a server to check certificates"
+msgstr "Anslut till en server för att kontrollera certifikat"
+
+#: freeipa_manager/views/dashboard.py:143
+msgid "Replication Topology"
+msgstr "Replikeringstopologi"
+
+#: freeipa_manager/views/dashboard.py:153
+msgid "No replication data"
+msgstr "Ingen replikeringsdata"
+
+#: freeipa_manager/views/dashboard.py:154
+msgid "Connect to a server to view topology"
+msgstr "Anslut till en server för att visa topologi"
+
+#: freeipa_manager/views/dashboard.py:160
+msgid "Service Health"
+msgstr "Tjänsternas hälsa"
+
+msgid "Unknown"
+msgstr "Okänd"
+
+#: freeipa_manager/views/dashboard.py:265
+msgid "All certificates OK"
+msgstr "Alla certifikat OK"
+
+#: freeipa_manager/views/dashboard.py:266
+msgid "No certificates expiring within 90 days"
+msgstr "Inga certifikat som går ut inom 90 dagar"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nej"
+
+#: freeipa_manager/views/users.py:58
+msgid "Search users…"
+msgstr "Sök användare…"
+
+msgid "Add User"
+msgstr "Lägg till användare"
+
+msgid "Export"
+msgstr "Exportera"
+
+msgid "Login"
+msgstr "Inloggning"
+
+msgid "First Name"
+msgstr "Förnamn"
+
+msgid "Last Name"
+msgstr "Efternamn"
+
+msgid "Email"
+msgstr "E-post"
+
+msgid "Disabled"
+msgstr "Inaktiverad"
+
+#: freeipa_manager/views/users.py:191
+msgid "UID Number"
+msgstr "UID-nummer"
+
+#: freeipa_manager/views/users.py:192
+msgid "GID Number"
+msgstr "GID-nummer"
+
+#: freeipa_manager/views/users.py:193
+msgid "Home Directory"
+msgstr "Hemkatalog"
+
+#: freeipa_manager/views/users.py:194
+msgid "Shell"
+msgstr "Skal"
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Edit"
+msgstr "Redigera"
+
+#: freeipa_manager/views/users.py:218
+#, python-format
+msgid "Edit User: %s"
+msgstr "Redigera användare: %s"
+
+#: freeipa_manager/views/users.py:219
+msgid "Editing is performed via FreeIPA API calls."
+msgstr "Redigering utförs via FreeIPA API-anrop."
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Disable"
+msgstr "Inaktivera"
+
+msgid "Enable"
+msgstr "Aktivera"
+
+msgid "Error"
+msgstr "Fel"
+
+msgid "Create"
+msgstr "Skapa"
+
+#: freeipa_manager/views/users.py:297
+msgid "All fields are required."
+msgstr "Alla fält krävs."
+
+#: freeipa_manager/views/users.py:351
+#, python-format
+msgid "%d users"
+msgstr "%d användare"
+
+#: freeipa_manager/views/groups.py:54
+msgid "Search groups…"
+msgstr "Sök grupper…"
+
+msgid "Add Group"
+msgstr "Lägg till grupp"
+
+msgid "Name"
+msgstr "Namn"
+
+msgid "Description"
+msgstr "Beskrivning"
+
+msgid "GID"
+msgstr "GID"
+
+msgid "Members"
+msgstr "Medlemmar"
+
+msgid "None"
+msgstr "Inga"
+
+#: freeipa_manager/views/groups.py:177
+#, python-format
+msgid ""
+"Description: %s\n"
+"GID: %s\n"
+"Members: %s"
+msgstr ""
+"Beskrivning: %s\n"
+"GID: %s\n"
+"Medlemmar: %s"
+
+msgid "Add Member"
+msgstr "Lägg till medlem"
+
+#: freeipa_manager/views/groups.py:201
+#, python-format
+msgid "Add Member to %s"
+msgstr "Lägg till medlem i %s"
+
+#: freeipa_manager/views/groups.py:203
+msgid "User Login"
+msgstr "Användarinloggning"
+
+msgid "Add"
+msgstr "Lägg till"
+
+#: freeipa_manager/views/groups.py:249
+msgid "Group Name"
+msgstr "Gruppnamn"
+
+#: freeipa_manager/views/groups.py:302
+#, python-format
+msgid "%d groups"
+msgstr "%d grupper"
+
+#: freeipa_manager/views/hosts.py:59
+msgid "Search hosts…"
+msgstr "Sök värdar…"
+
+msgid "FQDN"
+msgstr "FQDN"
+
+msgid "Enrolled"
+msgstr "Registrerad"
+
+msgid "Managed By"
+msgstr "Hanteras av"
+
+msgid "Platform"
+msgstr "Plattform"
+
+msgid "OS"
+msgstr "OS"
+
+#: freeipa_manager/views/hosts.py:214
+#, python-format
+msgid "%d hosts"
+msgstr "%d värdar"
+
+#: freeipa_manager/views/policies.py:56
+msgid "Search policies…"
+msgstr "Sök policyer…"
+
+msgid "HBAC Rules"
+msgstr "HBAC-regler"
+
+msgid "Sudo Rules"
+msgstr "Sudo-regler"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#: freeipa_manager/views/policies.py:163
+#, python-format
+msgid "Name: %s"
+msgstr "Namn: %s"
+
+#: freeipa_manager/views/policies.py:164
+#, python-format
+msgid "Type: %s"
+msgstr "Typ: %s"
+
+#: freeipa_manager/views/policies.py:165
+#, python-format
+msgid "Enabled: %s"
+msgstr "Aktiverad: %s"
+
+#: freeipa_manager/views/policies.py:166
+#, python-format
+msgid "Description: %s"
+msgstr "Beskrivning: %s"
+
+#: freeipa_manager/views/policies.py:203
+#, python-format
+msgid "%d rules"
+msgstr "%d regler"
+
+#: freeipa_manager/views/dns.py:84
+msgid "Search DNS…"
+msgstr "Sök DNS…"
+
+msgid "← Zones"
+msgstr "← Zoner"
+
+msgid "Zone"
+msgstr "Zon"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Data"
+msgstr "Data"
+
+#: freeipa_manager/views/dns.py:226
+#, python-format
+msgid ""
+"Type: %s\n"
+"Data: %s"
+msgstr ""
+"Typ: %s\n"
+"Data: %s"
+
+#: freeipa_manager/views/dns.py:257
+#, python-format
+msgid "%d records"
+msgstr "%d poster"
+
+#: freeipa_manager/views/dns.py:296
+#, python-format
+msgid "%d zones"
+msgstr "%d zoner"
+
+#: freeipa_manager/views/certs.py:67
+msgid "Search certificates…"
+msgstr "Sök certifikat…"
+
+msgid "Expiring Only"
+msgstr "Endast utgående"
+
+msgid "Serial"
+msgstr "Serienummer"
+
+msgid "Subject"
+msgstr "Ämne"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Expires"
+msgstr "Går ut"
+
+msgid "Days Left"
+msgstr "Dagar kvar"
+
+#: freeipa_manager/views/certs.py:180
+#, python-format
+msgid "Serial: %s"
+msgstr "Serienummer: %s"
+
+#: freeipa_manager/views/certs.py:181
+#, python-format
+msgid "Subject: %s"
+msgstr "Ämne: %s"
+
+#: freeipa_manager/views/certs.py:182
+#, python-format
+msgid "Status: %s"
+msgstr "Status: %s"
+
+#: freeipa_manager/views/certs.py:183
+#, python-format
+msgid "Expires: %s"
+msgstr "Går ut: %s"
+
+#: freeipa_manager/views/certs.py:184
+#, python-format
+msgid "Days Remaining: %s"
+msgstr "Dagar kvar: %s"
+
+#: freeipa_manager/views/certs.py:188
+msgid "Certificate Details"
+msgstr "Certifikatdetaljer"
+
+#: freeipa_manager/views/certs.py:219
+#, python-format
+msgid "%d certificates"
+msgstr "%d certifikat"
+
+#: freeipa_manager/views/certs.py:253
+msgid "Certificate Expiry Warning"
+msgstr "Varning om certifikatutgång"
+
+#: freeipa_manager/views/certs.py:256
+#, python-format
+msgid "%d certificate(s) expiring within 30 days"
+msgstr "%d certifikat som går ut inom 30 dagar"
+
+#: freeipa_manager/widgets/connection.py:26
+msgid "Connect to FreeIPA Server"
+msgstr "Anslut till FreeIPA-server"
+
+#: freeipa_manager/widgets/connection.py:27
+msgid "Enter your FreeIPA server details to connect."
+msgstr "Ange dina FreeIPA-serveruppgifter för att ansluta."
+
+#: freeipa_manager/widgets/connection.py:36
+msgid "Server Hostname"
+msgstr "Servervärdnamn"
+
+#: freeipa_manager/widgets/connection.py:42
+msgid "Authentication Method"
+msgstr "Autentiseringsmetod"
+
+#: freeipa_manager/widgets/connection.py:44
+msgid "Kerberos (GSSAPI)"
+msgstr "Kerberos (GSSAPI)"
+
+msgid "Password"
+msgstr "Lösenord"
+
+msgid "Username"
+msgstr "Användarnamn"
+
+#: freeipa_manager/widgets/connection.py:65
+msgid "Verify SSL Certificate"
+msgstr "Verifiera SSL-certifikat"
+
+msgid "Connect"
+msgstr "Anslut"
+
+#: freeipa_manager/widgets/connection.py:99
+msgid "Server hostname is required."
+msgstr "Servervärdnamn krävs."
+
+#: freeipa_manager/widgets/search.py:31
+msgid "Search…"
+msgstr "Sök…"
+
+#: freeipa_manager/widgets/export.py:51
+msgid "No data to export."
+msgstr "Inga data att exportera."
+
+#: freeipa_manager/widgets/export.py:58
+msgid "Export Data"
+msgstr "Exportera data"
+
+#: freeipa_manager/widgets/export.py:59
+msgid "Choose the export format."
+msgstr "Välj exportformat."
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "JSON"
+msgstr "JSON"
+
+#: freeipa_manager/cli/commands.py:21
+msgid "Error: --server is required"
+msgstr "Fel: --server krävs"
+
+#: freeipa_manager/cli/commands.py:31
+msgid "Password: "
+msgstr "Lösenord: "
+
+#: freeipa_manager/cli/commands.py:37
+#, python-format
+msgid "Authentication failed: %s"
+msgstr "Autentisering misslyckades: %s"
+
+#: freeipa_manager/cli/commands.py:66
+msgid "No results found."
+msgstr "Inga resultat hittades."
+
+#: freeipa_manager/cli/commands.py:91
+#, python-format
+msgid ""
+"\n"
+"%d result(s)"
+msgstr ""
+"\n"
+"%d resultat"
+
+#: freeipa_manager/cli/commands.py:105
+#, python-format
+msgid "Connected to %s"
+msgstr "Ansluten till %s"
+
+#: freeipa_manager/cli/commands.py:106
+#, python-format
+msgid "Servers: %d"
+msgstr "Servrar: %d"
+
+#, python-format
+msgid "Error: %s"
+msgstr "Fel: %s"
+
+#: freeipa_manager/cli/commands.py:234
+msgid "=== FreeIPA Dashboard ==="
+msgstr "=== FreeIPA Instrumentpanel ==="
+
+#: freeipa_manager/cli/commands.py:247
+#, python-format
+msgid "Last updated: %s"
+msgstr "Senast uppdaterad: %s"

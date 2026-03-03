@@ -1,0 +1,120 @@
+.TH IPA-MGR 1 "2024-01-01" "freeipa-manager 0.1.0" "User Commands"
+.SH NAME
+ipa-mgr \- command-line interface for FreeIPA server management
+.SH SYNOPSIS
+.B ipa-mgr
+[\fIOPTIONS\fR] \fICOMMAND\fR [\fIARGS\fR]
+.SH DESCRIPTION
+.B ipa-mgr
+is a command-line tool for managing FreeIPA identity management servers.
+It communicates with the FreeIPA JSON-RPC API and supports both Kerberos
+(GSSAPI) and password-based authentication.
+.PP
+A companion GTK4/Adwaita graphical interface is also available as
+.BR freeipa-manager (1).
+.SH OPTIONS
+.TP
+.BR \-s ", " \-\-server " " \fIHOSTNAME\fR
+FreeIPA server hostname (required).
+.TP
+.BR \-r ", " \-\-realm " " \fIREALM\fR
+Kerberos realm.
+.TP
+.BR \-u ", " \-\-user " " \fIUSERNAME\fR
+Username for password authentication. If omitted, Kerberos authentication
+is used.
+.TP
+.BR \-p ", " \-\-password " " \fIPASSWORD\fR
+Password for password authentication. If omitted, the user is prompted
+interactively.
+.TP
+.BR \-j ", " \-\-json
+Output results in JSON format for scripting.
+.TP
+.BR \-q ", " \-\-quiet
+Suppress non-essential output (headers, counts, separators).
+.TP
+.BR \-\-no\-verify
+Disable SSL certificate verification.
+.TP
+.BR \-V ", " \-\-version
+Show version and exit.
+.SH COMMANDS
+.TP
+.B connect
+Test the connection to a FreeIPA server and list available servers.
+.TP
+.B users \fR[\fIlist\fR|\fIshow \fILOGIN\fR]
+List all users or show details for a specific user.
+.TP
+.B groups
+List all groups.
+.TP
+.B hosts
+List all registered hosts.
+.TP
+.B certs \fR[\fIlist\fR|\fIexpiring\fR] [\fB\-\-days\fR \fIN\fR]
+List certificates or show those expiring within N days (default: 30).
+.TP
+.B policies \fR[\fB\-\-type\fR \fIhbac\fR|\fIsudo\fR]
+List HBAC or sudo rules.
+.TP
+.B dns \fR[\fIzones\fR|\fIrecords\fR] [\fB\-\-zone\fR \fIZONE\fR]
+List DNS zones or records for a specific zone.
+.TP
+.B status
+Display a dashboard-style status summary including user, host, group,
+and server counts.
+.SH EXIT CODES
+.TP
+.B 0
+Success.
+.TP
+.B 1
+General error (API failure, connection error, etc.).
+.TP
+.B 2
+Authentication failure.
+.SH EXAMPLES
+.PP
+Test connection using Kerberos:
+.RS
+.B ipa-mgr \-s ipa.example.com connect
+.RE
+.PP
+List all users in JSON format:
+.RS
+.B ipa-mgr \-s ipa.example.com \-\-json users list
+.RE
+.PP
+Show a specific user:
+.RS
+.B ipa-mgr \-s ipa.example.com users show admin
+.RE
+.PP
+List certificates expiring within 60 days:
+.RS
+.B ipa-mgr \-s ipa.example.com certs expiring \-\-days 60
+.RE
+.PP
+Authenticate with password:
+.RS
+.B ipa-mgr \-s ipa.example.com \-u admin \-p secret users list
+.RE
+.SH ENVIRONMENT
+.TP
+.B KRB5CCNAME
+Kerberos credential cache path, used for GSSAPI authentication.
+.SH FILES
+.TP
+.I ~/.config/freeipa-manager/config.json
+User configuration file storing last server, auth method, etc.
+.SH SEE ALSO
+.BR freeipa-manager (1),
+.BR ipa (1),
+.BR kinit (1),
+.BR klist (1)
+.SH AUTHOR
+Daniel Nylander <daniel@danielnylander.se>
+.SH LICENSE
+GPL-3.0-only

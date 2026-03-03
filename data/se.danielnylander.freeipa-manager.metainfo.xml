@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>se.danielnylander.freeipa-manager</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+
+  <name>FreeIPA Manager</name>
+  <name xml:lang="sv">FreeIPA-hanterare</name>
+
+  <summary>Manage FreeIPA servers with a modern desktop interface</summary>
+  <summary xml:lang="sv">Hantera FreeIPA-servrar med ett modernt skrivbordsgränssnitt</summary>
+
+  <description>
+    <p>
+      FreeIPA Manager provides a GTK4/Adwaita graphical interface and command-line
+      tool for administering FreeIPA identity management servers. Manage users,
+      groups, hosts, policies, DNS zones, and certificates from a single application.
+    </p>
+    <p xml:lang="sv">
+      FreeIPA-hanterare tillhandahåller ett GTK4/Adwaita grafiskt gränssnitt och
+      kommandoradsverktyg för att administrera FreeIPA-servrar för identitetshantering.
+      Hantera användare, grupper, värdar, policyer, DNS-zoner och certifikat från
+      en enda applikation.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Dashboard with server overview, certificate expiry warnings, and replication status</li>
+      <li>User management: create, edit, disable, enable, search</li>
+      <li>Group management with member editing</li>
+      <li>Host inventory and enrollment status</li>
+      <li>HBAC and sudo policy management</li>
+      <li>DNS zone and record browser</li>
+      <li>Certificate tracking with expiry notifications</li>
+      <li>CSV and JSON data export</li>
+      <li>Kerberos and password authentication</li>
+      <li>Command-line interface for scripting</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">se.danielnylander.freeipa-manager.desktop</launchable>
+
+  <url type="homepage">https://github.com/yeager/freeipa-manager</url>
+  <url type="bugtracker">https://github.com/yeager/freeipa-manager/issues</url>
+
+  <developer id="se.danielnylander">
+    <name>Daniel Nylander</name>
+  </developer>
+
+  <provides>
+    <binary>ipa-mgr</binary>
+    <binary>freeipa-manager</binary>
+  </provides>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </recommends>
+
+  <content_rating type="oars-1.1"/>
+
+  <releases>
+    <release version="0.1.0" date="2024-01-01">
+      <description>
+        <p>Initial release with full GUI and CLI support.</p>
+      </description>
+    </release>
+  </releases>
+</component>

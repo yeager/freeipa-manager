@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "freeipa-manager"
+version = "0.1.0"
+description = "GTK4/Adwaita GUI and CLI for managing FreeIPA servers"
+readme = "README.md"
+license = "GPL-3.0-only"
+requires-python = ">=3.10"
+authors = [
+    {name = "Daniel Nylander", email = "daniel@danielnylander.se"},
+]
+keywords = ["freeipa", "ipa", "gtk4", "adwaita", "kerberos", "ldap"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "PyGObject>=3.42",
+    "requests>=2.28",
+    "gssapi>=1.7",
+]
+
+[project.scripts]
+ipa-mgr = "freeipa_manager.__main__:main"
+
+[project.gui-scripts]
+freeipa-manager = "freeipa_manager.app:main"
+
+[project.urls]
+Homepage = "https://github.com/yeager/freeipa-manager"
+Repository = "https://github.com/yeager/freeipa-manager"
+Issues = "https://github.com/yeager/freeipa-manager/issues"
+
+[tool.setuptools.packages.find]
+include = ["freeipa_manager*"]

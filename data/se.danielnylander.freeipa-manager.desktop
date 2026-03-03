@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=FreeIPA Manager
+Name[sv]=FreeIPA-hanterare
+Comment=Manage FreeIPA servers with a modern desktop interface
+Comment[sv]=Hantera FreeIPA-servrar med ett modernt skrivbordsgränssnitt
+Exec=freeipa-manager
+Icon=se.danielnylander.freeipa-manager
+Terminal=false
+Type=Application
+Categories=System;Network;
+Keywords=freeipa;ipa;kerberos;ldap;identity;
+StartupNotify=true

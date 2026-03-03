@@ -1,0 +1,17 @@
+freeipa_manager/__init__.py
+freeipa_manager/__main__.py
+freeipa_manager/app.py
+freeipa_manager/api.py
+freeipa_manager/auth.py
+freeipa_manager/window.py
+freeipa_manager/views/dashboard.py
+freeipa_manager/views/users.py
+freeipa_manager/views/groups.py
+freeipa_manager/views/hosts.py
+freeipa_manager/views/policies.py
+freeipa_manager/views/dns.py
+freeipa_manager/views/certs.py
+freeipa_manager/widgets/connection.py
+freeipa_manager/widgets/search.py
+freeipa_manager/widgets/export.py
+freeipa_manager/cli/commands.py

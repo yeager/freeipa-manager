@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[o:danielnylander:p:freeipa-manager:r:messages]
+file_filter  = po/<lang>.po
+source_file  = po/freeipa-manager.pot
+source_lang  = en
+type         = PO
