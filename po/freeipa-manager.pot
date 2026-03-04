@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: freeipa-manager 0.1.0\n"
-"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
-"POT-Creation-Date: 2026-03-03 16:53+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-04 14:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,6 +106,19 @@ msgstr ""
 msgid "Dashboard status summary"
 msgstr ""
 
+#: freeipa_manager/api.py:75
+msgid "Not connected — call login first"
+msgstr ""
+
+#: freeipa_manager/api.py:99
+msgid "Session expired — please reconnect"
+msgstr ""
+
+#: freeipa_manager/api.py:101
+#, python-format
+msgid "HTTP %d from %s"
+msgstr ""
+
 #: freeipa_manager/app.py:102
 msgid "Welcome to FreeIPA Manager"
 msgstr ""
@@ -127,19 +140,6 @@ msgstr ""
 
 #: freeipa_manager/app.py:128
 msgid "GTK4/Adwaita GUI and CLI for managing FreeIPA servers"
-msgstr ""
-
-#: freeipa_manager/api.py:75
-msgid "Not connected — call login first"
-msgstr ""
-
-#: freeipa_manager/api.py:99
-msgid "Session expired — please reconnect"
-msgstr ""
-
-#: freeipa_manager/api.py:101
-#, python-format
-msgid "HTTP %d from %s"
 msgstr ""
 
 #: freeipa_manager/auth.py:35
@@ -211,34 +211,122 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: freeipa_manager/window.py:170
+#: freeipa_manager/window.py:168 freeipa_manager/window.py:326
+#: freeipa_manager/views/preferences.py:31
+msgid "Settings"
+msgstr ""
+
+#: freeipa_manager/window.py:191
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: freeipa_manager/window.py:171
+#: freeipa_manager/window.py:192
 msgid "About FreeIPA Manager"
 msgstr ""
 
-#: freeipa_manager/window.py:261 freeipa_manager/cli/commands.py:111
+#: freeipa_manager/window.py:284 freeipa_manager/cli/commands.py:111
 #, python-format
 msgid "Connection failed: %s"
 msgstr ""
 
-#: freeipa_manager/window.py:263
+#: freeipa_manager/window.py:286
 msgid "Connection Failed"
 msgstr ""
 
-#: freeipa_manager/window.py:266 freeipa_manager/views/users.py:251
-#: freeipa_manager/views/users.py:298 freeipa_manager/views/users.py:314
-#: freeipa_manager/views/groups.py:231
-#: freeipa_manager/widgets/connection.py:101
+#: freeipa_manager/window.py:289 freeipa_manager/views/groups.py:231
+#: freeipa_manager/views/users.py:251 freeipa_manager/views/users.py:298
+#: freeipa_manager/views/users.py:314 freeipa_manager/widgets/connection.py:101
 #: freeipa_manager/widgets/export.py:53
 msgid "OK"
 msgstr ""
 
-#: freeipa_manager/window.py:280 freeipa_manager/window.py:316
+#: freeipa_manager/window.py:303 freeipa_manager/window.py:345
 #, python-format
 msgid "Connected to %s — Last refresh: %s"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:67
+msgid "Search certificates…"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:78
+msgid "Expiring Only"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:82 freeipa_manager/views/dns.py:100
+#: freeipa_manager/views/groups.py:70 freeipa_manager/views/hosts.py:69
+#: freeipa_manager/views/policies.py:77 freeipa_manager/views/users.py:74
+#: freeipa_manager/widgets/export.py:50
+msgid "Export"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:107
+msgid "Serial"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:108
+msgid "Subject"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:109
+msgid "Status"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:110
+msgid "Expires"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:111
+msgid "Days Left"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:180
+#, python-format
+msgid "Serial: %s"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:181
+#, python-format
+msgid "Subject: %s"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:182
+#, python-format
+msgid "Status: %s"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:183
+#, python-format
+msgid "Expires: %s"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:184
+#, python-format
+msgid "Days Remaining: %s"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:188
+msgid "Certificate Details"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:191 freeipa_manager/views/dns.py:228
+#: freeipa_manager/views/groups.py:183 freeipa_manager/views/hosts.py:180
+#: freeipa_manager/views/policies.py:170 freeipa_manager/views/users.py:204
+msgid "Close"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:219
+#, python-format
+msgid "%d certificates"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:253
+msgid "Certificate Expiry Warning"
+msgstr ""
+
+#: freeipa_manager/views/certs.py:256
+#, python-format
+msgid "%d certificate(s) expiring within 30 days"
 msgstr ""
 
 #: freeipa_manager/views/dashboard.py:79
@@ -295,121 +383,60 @@ msgstr ""
 msgid "No certificates expiring within 90 days"
 msgstr ""
 
-#: freeipa_manager/views/users.py:40 freeipa_manager/views/hosts.py:37
-#: freeipa_manager/views/policies.py:36 freeipa_manager/views/dns.py:34
+#: freeipa_manager/views/dns.py:34 freeipa_manager/views/hosts.py:37
+#: freeipa_manager/views/policies.py:36 freeipa_manager/views/users.py:40
 msgid "Yes"
 msgstr ""
 
-#: freeipa_manager/views/users.py:40 freeipa_manager/views/hosts.py:37
-#: freeipa_manager/views/policies.py:36 freeipa_manager/views/dns.py:34
+#: freeipa_manager/views/dns.py:34 freeipa_manager/views/hosts.py:37
+#: freeipa_manager/views/policies.py:36 freeipa_manager/views/users.py:40
 msgid "No"
 msgstr ""
 
-#: freeipa_manager/views/users.py:58
-msgid "Search users…"
+#: freeipa_manager/views/dns.py:84
+msgid "Search DNS…"
 msgstr ""
 
-#: freeipa_manager/views/users.py:69 freeipa_manager/views/users.py:264
-msgid "Add User"
+#: freeipa_manager/views/dns.py:95
+msgid "← Zones"
 msgstr ""
 
-#: freeipa_manager/views/users.py:74 freeipa_manager/views/groups.py:70
-#: freeipa_manager/views/hosts.py:69 freeipa_manager/views/policies.py:77
-#: freeipa_manager/views/dns.py:100 freeipa_manager/views/certs.py:82
-#: freeipa_manager/widgets/export.py:50
-msgid "Export"
+#: freeipa_manager/views/dns.py:128
+msgid "Zone"
 msgstr ""
 
-#: freeipa_manager/views/users.py:99 freeipa_manager/views/users.py:187
-#: freeipa_manager/views/users.py:271
-msgid "Login"
+#: freeipa_manager/views/dns.py:128
+msgid "Active"
 msgstr ""
 
-#: freeipa_manager/views/users.py:100 freeipa_manager/views/users.py:188
-#: freeipa_manager/views/users.py:271
-msgid "First Name"
+#: freeipa_manager/views/dns.py:152 freeipa_manager/views/groups.py:95
+#: freeipa_manager/views/policies.py:102
+msgid "Name"
 msgstr ""
 
-#: freeipa_manager/views/users.py:101 freeipa_manager/views/users.py:189
-#: freeipa_manager/views/users.py:272
-msgid "Last Name"
+#: freeipa_manager/views/dns.py:153 freeipa_manager/views/policies.py:103
+msgid "Type"
 msgstr ""
 
-#: freeipa_manager/views/users.py:102 freeipa_manager/views/users.py:190
-msgid "Email"
+#: freeipa_manager/views/dns.py:154
+msgid "Data"
 msgstr ""
 
-#: freeipa_manager/views/users.py:103
-msgid "Disabled"
-msgstr ""
-
-#: freeipa_manager/views/users.py:191
-msgid "UID Number"
-msgstr ""
-
-#: freeipa_manager/views/users.py:192
-msgid "GID Number"
-msgstr ""
-
-#: freeipa_manager/views/users.py:193
-msgid "Home Directory"
-msgstr ""
-
-#: freeipa_manager/views/users.py:194
-msgid "Shell"
-msgstr ""
-
-#: freeipa_manager/views/users.py:204 freeipa_manager/views/groups.py:183
-#: freeipa_manager/views/hosts.py:180 freeipa_manager/views/policies.py:170
-#: freeipa_manager/views/dns.py:228 freeipa_manager/views/certs.py:191
-msgid "Close"
-msgstr ""
-
-#: freeipa_manager/views/users.py:205
-msgid "Edit"
-msgstr ""
-
-#: freeipa_manager/views/users.py:218
+#: freeipa_manager/views/dns.py:226
 #, python-format
-msgid "Edit User: %s"
+msgid ""
+"Type: %s\n"
+"Data: %s"
 msgstr ""
 
-#: freeipa_manager/views/users.py:219
-msgid "Editing is performed via FreeIPA API calls."
-msgstr ""
-
-#: freeipa_manager/views/users.py:221 freeipa_manager/views/users.py:279
-#: freeipa_manager/views/groups.py:205 freeipa_manager/views/groups.py:257
-#: freeipa_manager/widgets/connection.py:73
-#: freeipa_manager/widgets/export.py:61
-msgid "Cancel"
-msgstr ""
-
-#: freeipa_manager/views/users.py:222
-msgid "Disable"
-msgstr ""
-
-#: freeipa_manager/views/users.py:223
-msgid "Enable"
-msgstr ""
-
-#: freeipa_manager/views/users.py:250 freeipa_manager/views/users.py:297
-#: freeipa_manager/views/users.py:313 freeipa_manager/views/groups.py:230
-#: freeipa_manager/widgets/connection.py:99
-msgid "Error"
-msgstr ""
-
-#: freeipa_manager/views/users.py:280 freeipa_manager/views/groups.py:258
-msgid "Create"
-msgstr ""
-
-#: freeipa_manager/views/users.py:297
-msgid "All fields are required."
-msgstr ""
-
-#: freeipa_manager/views/users.py:351
+#: freeipa_manager/views/dns.py:257
 #, python-format
-msgid "%d users"
+msgid "%d records"
+msgstr ""
+
+#: freeipa_manager/views/dns.py:296
+#, python-format
+msgid "%d zones"
 msgstr ""
 
 #: freeipa_manager/views/groups.py:54
@@ -418,11 +445,6 @@ msgstr ""
 
 #: freeipa_manager/views/groups.py:65 freeipa_manager/views/groups.py:243
 msgid "Add Group"
-msgstr ""
-
-#: freeipa_manager/views/groups.py:95 freeipa_manager/views/policies.py:102
-#: freeipa_manager/views/dns.py:152
-msgid "Name"
 msgstr ""
 
 #: freeipa_manager/views/groups.py:96 freeipa_manager/views/groups.py:253
@@ -464,12 +486,29 @@ msgstr ""
 msgid "User Login"
 msgstr ""
 
+#: freeipa_manager/views/groups.py:205 freeipa_manager/views/groups.py:257
+#: freeipa_manager/views/users.py:221 freeipa_manager/views/users.py:279
+#: freeipa_manager/widgets/connection.py:73
+#: freeipa_manager/widgets/export.py:61
+msgid "Cancel"
+msgstr ""
+
 #: freeipa_manager/views/groups.py:206
 msgid "Add"
 msgstr ""
 
+#: freeipa_manager/views/groups.py:230 freeipa_manager/views/users.py:250
+#: freeipa_manager/views/users.py:297 freeipa_manager/views/users.py:313
+#: freeipa_manager/widgets/connection.py:99
+msgid "Error"
+msgstr ""
+
 #: freeipa_manager/views/groups.py:249
 msgid "Group Name"
+msgstr ""
+
+#: freeipa_manager/views/groups.py:258 freeipa_manager/views/users.py:280
+msgid "Create"
 msgstr ""
 
 #: freeipa_manager/views/groups.py:302
@@ -518,10 +557,6 @@ msgstr ""
 msgid "Sudo Rules"
 msgstr ""
 
-#: freeipa_manager/views/policies.py:103 freeipa_manager/views/dns.py:153
-msgid "Type"
-msgstr ""
-
 #: freeipa_manager/views/policies.py:104
 msgid "Enabled"
 msgstr ""
@@ -551,112 +586,189 @@ msgstr ""
 msgid "%d rules"
 msgstr ""
 
-#: freeipa_manager/views/dns.py:84
-msgid "Search DNS…"
+#: freeipa_manager/views/preferences.py:39
+msgid "General"
 msgstr ""
 
-#: freeipa_manager/views/dns.py:95
-msgid "← Zones"
+#: freeipa_manager/views/preferences.py:40
+msgid "Common settings"
 msgstr ""
 
-#: freeipa_manager/views/dns.py:128
-msgid "Zone"
+#: freeipa_manager/views/preferences.py:44
+msgid "Auto-connect on Startup"
 msgstr ""
 
-#: freeipa_manager/views/dns.py:128
-msgid "Active"
+#: freeipa_manager/views/preferences.py:45
+msgid "Automatically connect to the last server"
 msgstr ""
 
-#: freeipa_manager/views/dns.py:154
-msgid "Data"
+#: freeipa_manager/views/preferences.py:52
+msgid "Desktop Notifications"
 msgstr ""
 
-#: freeipa_manager/views/dns.py:226
+#: freeipa_manager/views/preferences.py:53
+msgid "Show notifications for important events"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:60
+msgid "Auto-refresh Interval"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:61
+msgid "How often to refresh data from server"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:63 freeipa_manager/views/users.py:103
+msgid "Disabled"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:64
+msgid "30 seconds"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:65
+msgid "1 minute"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:66
+msgid "5 minutes"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:67
+msgid "15 minutes"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:78
+msgid "Items per Page"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:79
+msgid "Number of entries shown in list views"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:94
+msgid "Advanced Settings"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:95
+msgid "Connection and security options"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:101
+msgid "Verify SSL Certificates"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:102
+msgid "Disable only for testing environments"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:109
+msgid "Connection Timeout (seconds)"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:110
+msgid "Maximum time to wait for server response"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:117
+msgid "Max Concurrent Requests"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:118
+msgid "Number of parallel API requests"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:125
+msgid "Log Level"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:126
+msgid "Verbosity of application logging"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:136
+msgid "Default Export Format"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:137
+msgid "Format for data exports"
+msgstr ""
+
+#: freeipa_manager/views/preferences.py:154
+msgid "Reset to Defaults"
+msgstr ""
+
+#: freeipa_manager/views/users.py:58
+msgid "Search users…"
+msgstr ""
+
+#: freeipa_manager/views/users.py:69 freeipa_manager/views/users.py:264
+msgid "Add User"
+msgstr ""
+
+#: freeipa_manager/views/users.py:99 freeipa_manager/views/users.py:187
+#: freeipa_manager/views/users.py:271
+msgid "Login"
+msgstr ""
+
+#: freeipa_manager/views/users.py:100 freeipa_manager/views/users.py:188
+#: freeipa_manager/views/users.py:271
+msgid "First Name"
+msgstr ""
+
+#: freeipa_manager/views/users.py:101 freeipa_manager/views/users.py:189
+#: freeipa_manager/views/users.py:272
+msgid "Last Name"
+msgstr ""
+
+#: freeipa_manager/views/users.py:102 freeipa_manager/views/users.py:190
+msgid "Email"
+msgstr ""
+
+#: freeipa_manager/views/users.py:191
+msgid "UID Number"
+msgstr ""
+
+#: freeipa_manager/views/users.py:192
+msgid "GID Number"
+msgstr ""
+
+#: freeipa_manager/views/users.py:193
+msgid "Home Directory"
+msgstr ""
+
+#: freeipa_manager/views/users.py:194
+msgid "Shell"
+msgstr ""
+
+#: freeipa_manager/views/users.py:205
+msgid "Edit"
+msgstr ""
+
+#: freeipa_manager/views/users.py:218
 #, python-format
-msgid ""
-"Type: %s\n"
-"Data: %s"
+msgid "Edit User: %s"
 msgstr ""
 
-#: freeipa_manager/views/dns.py:257
+#: freeipa_manager/views/users.py:219
+msgid "Editing is performed via FreeIPA API calls."
+msgstr ""
+
+#: freeipa_manager/views/users.py:222
+msgid "Disable"
+msgstr ""
+
+#: freeipa_manager/views/users.py:223
+msgid "Enable"
+msgstr ""
+
+#: freeipa_manager/views/users.py:297
+msgid "All fields are required."
+msgstr ""
+
+#: freeipa_manager/views/users.py:351
 #, python-format
-msgid "%d records"
-msgstr ""
-
-#: freeipa_manager/views/dns.py:296
-#, python-format
-msgid "%d zones"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:67
-msgid "Search certificates…"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:78
-msgid "Expiring Only"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:107
-msgid "Serial"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:108
-msgid "Subject"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:109
-msgid "Status"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:110
-msgid "Expires"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:111
-msgid "Days Left"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:180
-#, python-format
-msgid "Serial: %s"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:181
-#, python-format
-msgid "Subject: %s"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:182
-#, python-format
-msgid "Status: %s"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:183
-#, python-format
-msgid "Expires: %s"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:184
-#, python-format
-msgid "Days Remaining: %s"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:188
-msgid "Certificate Details"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:219
-#, python-format
-msgid "%d certificates"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:253
-msgid "Certificate Expiry Warning"
-msgstr ""
-
-#: freeipa_manager/views/certs.py:256
-#, python-format
-msgid "%d certificate(s) expiring within 30 days"
+msgid "%d users"
 msgstr ""
 
 #: freeipa_manager/widgets/connection.py:26
@@ -700,10 +812,6 @@ msgstr ""
 msgid "Server hostname is required."
 msgstr ""
 
-#: freeipa_manager/widgets/search.py:31
-msgid "Search…"
-msgstr ""
-
 #: freeipa_manager/widgets/export.py:51
 msgid "No data to export."
 msgstr ""
@@ -722,6 +830,10 @@ msgstr ""
 
 #: freeipa_manager/widgets/export.py:63
 msgid "JSON"
+msgstr ""
+
+#: freeipa_manager/widgets/search.py:31
+msgid "Search…"
 msgstr ""
 
 #: freeipa_manager/cli/commands.py:21
