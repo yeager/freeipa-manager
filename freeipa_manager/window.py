@@ -158,9 +158,30 @@ class FreeIPAWindow(Adw.ApplicationWindow):
         scrolled.set_child(sidebar_list)
         scrolled.set_vexpand(True)
 
+        # Settings button at the bottom of sidebar
+        settings_btn = Gtk.Button()
+        settings_btn.set_child(
+            Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        )
+        box = settings_btn.get_child()
+        box.append(Gtk.Image.new_from_icon_name("emblem-system-symbolic"))
+        box.append(Gtk.Label(label=_("Settings")))
+        box.set_halign(Gtk.Align.START)
+        settings_btn.add_css_class("flat")
+        settings_btn.set_margin_start(8)
+        settings_btn.set_margin_end(8)
+        settings_btn.set_margin_top(4)
+        settings_btn.set_margin_bottom(8)
+        settings_btn.connect("clicked", self._on_settings_clicked)
+
+        sidebar_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        sidebar_box.append(scrolled)
+        sidebar_box.append(Gtk.Separator())
+        sidebar_box.append(settings_btn)
+
         toolbar = Adw.ToolbarView()
         toolbar.add_top_bar(header)
-        toolbar.set_content(scrolled)
+        toolbar.set_content(sidebar_box)
 
         self._sidebar_list = sidebar_list
         return toolbar
@@ -180,6 +201,7 @@ class FreeIPAWindow(Adw.ApplicationWindow):
         from .views.policies import PoliciesView
         from .views.dns import DNSView
         from .views.certs import CertsView
+        from .views.preferences import PreferencesView
 
         view_classes = {
             "dashboard": DashboardView,
@@ -189,6 +211,7 @@ class FreeIPAWindow(Adw.ApplicationWindow):
             "policies": PoliciesView,
             "dns": DNSView,
             "certs": CertsView,
+            "settings": PreferencesView,
         }
 
         for nav_id, cls in view_classes.items():
@@ -295,6 +318,12 @@ class FreeIPAWindow(Adw.ApplicationWindow):
     # ------------------------------------------------------------------
     # Refresh
     # ------------------------------------------------------------------
+
+    def _on_settings_clicked(self, _btn: Gtk.Button) -> None:
+        """Navigate to settings view."""
+        self._sidebar_list.unselect_all()
+        self._navigate_to("settings")
+        self._content_title.set_title(_("Settings"))
 
     def _on_refresh(self, _action: Gio.SimpleAction, _param: None) -> None:
         self._refresh_current_view()
