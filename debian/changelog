@@ -1,0 +1,6 @@
+freeipa-manager (0.2.0-1) unstable; urgency=low
+
+  * Add settings view (simple + advanced) in sidebar.
+  * Add Swedish translation (100%).
+
+ -- Daniel Nylander <daniel@danielnylander.se>  Tue, 04 Mar 2026 19:35:00 +0100

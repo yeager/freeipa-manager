@@ -1,0 +1,15 @@
+Source: freeipa-manager
+Section: admin
+Priority: optional
+Maintainer: Daniel Nylander <daniel@danielnylander.se>
+Build-Depends: debhelper-compat (= 13), python3, dh-python, pybuild-plugin-pyproject, python3-setuptools
+Standards-Version: 4.6.2
+Homepage: https://github.com/yeager/freeipa-manager
+
+Package: freeipa-manager
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1, python3-requests
+Description: GTK4 GUI and CLI for managing FreeIPA servers
+ FreeIPA Manager provides a GTK4/Adwaita GUI and CLI for managing
+ FreeIPA servers with sidebar navigation, settings view, user/group/host
+ management, and keyboard shortcuts.
